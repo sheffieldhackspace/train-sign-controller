@@ -1,5 +1,9 @@
 # sign controller
 
+content cycler for <https://github.com/sheffieldhackspace/train-signs>
+
+![picture of train sign showing logo](./example.webp)
+
 to run:
 
 ```bash
