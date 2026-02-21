@@ -29,6 +29,7 @@ examples of a content cycle (sent as web requests from other device)
 - (WEA) weather (see https://github.com/alifeee/weather_landscape/) (image)
 - (ART) SHHM logo animation (image/anim)
 - (OJ) 3D printer progress bar? from Octoprint (image/text)
+- (WIKI) current membership numbers
 
 MQTT A
 : listen for MQTT messages. spec here
@@ -53,3 +54,6 @@ ART
 
 OJ
 : no idea how to do this, but presumably it's simple enough using an API request. would have to check if printer is on or not before sending request, lest it timeout
+
+WIKI
+: curl the wiki and use `hxselect` ;] - hope the format doesnt' change :]
