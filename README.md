@@ -12,6 +12,25 @@ nano .env
 ./run.sh
 ```
 
+## set up on Pi server
+
+```bash
+# generate key
+ssh-keygen -f /usr/shhm/.ssh/trainsigncontroller-deploy-key
+# upload to GitHub as deploy key
+cat /usr/shhm/.ssh/trainsigncontroller-deploy-key.pub
+
+# to-do: make systemd service file
+echo "er, yes"
+```
+
+update
+
+```bash
+./update_from_git.sh
+# to-do: restart service
+```
+
 ## to-do
 
 examples of instant events
