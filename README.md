@@ -19,9 +19,13 @@ nano .env
 ssh-keygen -f /usr/shhm/.ssh/trainsigncontroller-deploy-key
 # upload to GitHub as deploy key
 cat /usr/shhm/.ssh/trainsigncontroller-deploy-key.pub
-
+# create user
+sudo useradd -r -s /bin/false trainsign
 # to-do: make systemd service file
-echo "er, yes"
+sudo cp train-sign-controller.service /etc/systemd/system/
+sudo systemctl enable train-sign-controller
+sudo systemctl start train-sign-controller
+sudo systemctl status train-sign-controller
 ```
 
 update

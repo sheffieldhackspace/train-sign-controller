@@ -1,0 +1,16 @@
+[Unit]
+Description=Content cycle for the LCD train sign
+After=network.target
+
+[Service]
+User=trainsign
+Group=trainsign
+
+ExecStart=/usr/shhm/train-sign-controller/run.sh
+WorkingDirectory=/usr/shhm/train-sign-controller/
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
