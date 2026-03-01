@@ -21,6 +21,8 @@ ssh-keygen -f /usr/shhm/.ssh/trainsigncontroller-deploy-key
 cat /usr/shhm/.ssh/trainsigncontroller-deploy-key.pub
 # create user
 sudo useradd -r -s /bin/false trainsign
+# install packages
+sudo apt install gawk curl html-xml-utils
 # to-do: make systemd service file
 sudo cp train-sign-controller.service /etc/systemd/system/
 sudo systemctl enable train-sign-controller
