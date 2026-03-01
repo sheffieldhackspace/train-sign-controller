@@ -3,13 +3,14 @@
 # for icon see icons/shhm.bmp in https://github.com/sheffieldhackspace/train-signs
 
 jq -cn '{
-  text: ".\n SHEFFIELD\n HACKSPACE",
-  text_wrap: false,
-  flash: false,
-  invert: false,
-  horizontal_align: -1,
-  vertical_align: 1,
-  image: "ABgAAZmAAf+AGf+YH//4DgAwDv/wfH/+fv+uP/UEP1VU8VF39xV/MVX8PV/8cf++f/8eD/+wDgAwH//4Gf+YAf+AAZmAABgA",
-  image_width: 24,
-  image_height: 24
+  "text": "SHEFFIELD\nHACKSPACE",
+  "text_size": 1,
+  "text_wrap": false,
+  "flashing": false,
+  "inverted": false,
+  "horizontal_align": "left",
+  "vertical_align": "middle",
+  "image": "AAGAAAAZmAAAH/gAAZ/5gAH//4AA4AMAAO//AAfH/+AH7/rgA/9QQAP1VUAPFRdwD3FX8AMVX8AD1f/ABx/74Af/8eAA//sAAOADAAH//4ABn/mAAB/4AAAZmAAAAYAA",
+  "image_width": 32,
+  "image_height": 24
 }'

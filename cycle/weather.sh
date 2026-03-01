@@ -16,10 +16,10 @@ fi
 
 jq -cn --argjson msg "\"${msg}\"" '{
   text: $msg,
+  text_size: 1,
   text_wrap: false,
-  flash: false,
-  invert: false,
-  horizontal_align: 0,
-  vertical_align: 0
+  flashing: false,
+  inverted: false,
+  horizontal_align: "center",
+  vertical_align: "middle"
 }'
-
