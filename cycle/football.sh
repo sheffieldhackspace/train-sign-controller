@@ -60,7 +60,19 @@ else
   ngames=$(
     echo "${games}" | jq 'length'
   )
-  msg="NXT FTBALL GAME\n1 of ${ngames}\n"$(echo "${games}" | jq -r '.[0] | (.START_TS | strftime("%H:%M %a %d/%m")) as $date | "\(.SUMMARY | .[0:18])\\n\($date)"')
+  msg="NXT FTBALL GAME\n1 of ${ngames}\n"$(
+    echo "${games}" \
+      | jq -r '.[0]
+        | "\(.SUMMARY)"
+      ' \
+      | sed -E 's+Sheffield United+Blades+;s+^(.{18}).*+\1+'
+  )"\n"$(
+    echo "${games}" \
+      | jq -r '.[0]
+        | .START_TS
+        | strftime("%H:%M %a %d/%m")
+      '
+  )
 fi
 
 jq -cn --argjson msg "\"${msg}\"" '{
