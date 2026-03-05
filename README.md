@@ -56,6 +56,7 @@ examples of a content cycle (sent as web requests from other device)
 - (OJ) 3D printer progress bar? from Octoprint (image/text)
 - (WIKI) current membership numbers
 - days until EMF camp
+- total repair café repairs
 
 MQTT A
 : listen for MQTT messages. spec here
