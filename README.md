@@ -50,12 +50,7 @@ examples of a content cycle (sent as web requests from other device)
 - (GRF1) current temperature (⁰C)
 - (GRF1) current internet usage (kB /s)
 - (GRF1) current power usage (W)
-- (FTBL) next football game (datetime)
-- (WEA) weather (see https://github.com/alifeee/weather_landscape/) (image)
-- (ART) SHHM logo animation (image/anim)
 - (OJ) 3D printer progress bar? from Octoprint (image/text)
-- (WIKI) current membership numbers
-- days until EMF camp
 - total repair café repairs
 
 MQTT A
@@ -69,18 +64,5 @@ GRF1
 : available via appropriate curl request to InfluxDB/Grafana
 : <https://wiki.sheffieldhackspace.org.uk/members/projects/monitoring>
 
-FTBL
-: custom parsing of webpage similar to <https://github.com/sheffieldhackspace/football-fixtures-webhook>
-
-WEA
-: for textual weather description, I think some (MET?) APIs include a textual weather forecast field
-: for image, see link above in original list item
-
-ART
-: you'd just make this as an image/gif 
-
 OJ
 : no idea how to do this, but presumably it's simple enough using an API request. would have to check if printer is on or not before sending request, lest it timeout
-
-WIKI
-: curl the wiki and use `hxselect` ;] - hope the format doesnt' change :]

@@ -7,7 +7,7 @@ if [[ -z "${SIGN_IP}" ]]; then
   echo "no IP set! set SIGN_IP in .env"
 fi
 
-i="${1:-2}"
+i="${1:-5}"
 while true; do
   # choose file
   echo "=== executing file ${i} ===" >&2
@@ -26,6 +26,8 @@ while true; do
 
   # increment round robin
   i=$(( 1 + ( $i % $nfiles ) ))
+
+  if [[ ! -z "${EXIT_IMMEDIATELY}" ]]; then exit 0; fi
 
   sleep 5
 done
