@@ -7,7 +7,10 @@ if [[ -z "${SIGN_IP}" ]]; then
   echo "no IP set! set SIGN_IP in .env"
 fi
 
+sleep_time="${SLEEP_TIME:-90}"
+
 i="${1:-5}"
+echo "starting cycle from item ${i}, with ${sleep_time} s between items"
 while true; do
   # choose file
   echo "=== executing file ${i} ===" >&2
@@ -29,5 +32,5 @@ while true; do
 
   if [[ ! -z "${EXIT_IMMEDIATELY}" ]]; then exit 0; fi
 
-  sleep 5
+  sleep "${sleep_time}"
 done
