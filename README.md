@@ -22,7 +22,7 @@ cat /usr/shhm/.ssh/trainsigncontroller-deploy-key.pub
 # create user
 sudo useradd -r -s /bin/false trainsign
 # install packages
-sudo apt install gawk curl html-xml-utils python3 python3-pil
+sudo apt install gawk curl html-xml-utils python3 python3-pil imagemagick
 # to-do: make systemd service file
 sudo cp train-sign-controller.service /etc/systemd/system/
 sudo systemctl enable train-sign-controller
